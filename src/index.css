@@ -1,13 +1,120 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #108dc7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ef8e38,
+    #108dc7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ef8e38,
+    #108dc7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.container {
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.list-item {
+  list-style-type: none;
+  padding: 0.5rem 2rem;
+}
+
+.list-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item-span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-item-span input {
+  margin-right: 14px;
+}
+
+.list-item button {
+  background-color: rgb(158, 193, 204);
+  color: rgb(219, 0, 0);
+  border: 1px solid rgb(219, 0, 0);
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.list-item button:active {
+  transform: scale(0.95);
+}
+
+.green {
+  background-color: rgb(176, 255, 176);
+  color: grey;
+  border-radius: 6px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control input {
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 15px;
+  outline: none;
+  background-color: rgb(158, 193, 204);
+  border: 1px solid white;
+}
+
+.error {
+  border: 1px solid red !important;
+}
+
+.form-control input:focus {
+  color: white;
+  background-color: #d36f18;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.form-control input:focus::placeholder {
+  color: white;
+}
+
+.form-control button {
+  margin: 1rem auto;
+  border-radius: 100%;
+  padding: 0.8rem;
+  font-weight: lighter;
+  color: salmon;
+  border: 1px solid rgb(255, 98, 81);
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease-in;
+}
+
+.form-control button:active {
+  color: white;
+  background-color: salmon;
+}
+
+.form-control button:hover {
+  transform: rotateX(360deg);
 }
